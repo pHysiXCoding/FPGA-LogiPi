@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "I:/Dev/basic_io_edu/sseg_out.xst" -ofn "I:/Dev/basic_io_edu/sseg_out.syr" 
+xst -intstyle ise -ifn "I:/Dev/basic_io_edu/sseg_out.xst" -ofn "I:/Dev/basic_io_edu/sseg_out.syr" 
+xst -intstyle ise -ifn "I:/Dev/basic_io_edu/sseg_out.xst" -ofn "I:/Dev/basic_io_edu/sseg_out.syr" 
+xst -intstyle ise -ifn "I:/Dev/basic_io_edu/sseg_out.xst" -ofn "I:/Dev/basic_io_edu/sseg_out.syr" 

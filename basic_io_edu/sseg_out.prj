@@ -1,0 +1,2 @@
+verilog work "hex_encoder.v"
+verilog work "sseg_out.v"

@@ -1,0 +1,816 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "I:\Dev\basic_io_edu\source\hex_encoder.v" into library work
+Parsing module <hex_encoder>.
+Analyzing Verilog file "I:\Dev\basic_io_edu\source\sseg_module.v" into library work
+Parsing module <sseg_module>.
+Analyzing Verilog file "I:\Dev\basic_io_edu\source\counter.v" into library work
+Parsing module <counter>.
+Analyzing Verilog file "I:\Dev\basic_io_edu\source\main.v" into library work
+Parsing module <main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <main>.
+WARNING:HDLCompiler:604 - "I:\Dev\basic_io_edu\source\main.v" Line 13: Module instantiation should have an instance name
+
+Elaborating module <counter>.
+WARNING:HDLCompiler:413 - "I:\Dev\basic_io_edu\source\counter.v" Line 23: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:413 - "I:\Dev\basic_io_edu\source\counter.v" Line 38: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "I:\Dev\basic_io_edu\source\counter.v" Line 50: Result of 32-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "I:\Dev\basic_io_edu\source\counter.v" Line 52: Result of 32-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:604 - "I:\Dev\basic_io_edu\source\counter.v" Line 62: Module instantiation should have an instance name
+
+Elaborating module <sseg_module>.
+WARNING:HDLCompiler:413 - "I:\Dev\basic_io_edu\source\sseg_module.v" Line 16: Result of 19-bit expression is truncated to fit in 18-bit target.
+WARNING:HDLCompiler:413 - "I:\Dev\basic_io_edu\source\sseg_module.v" Line 19: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:604 - "I:\Dev\basic_io_edu\source\sseg_module.v" Line 30: Module instantiation should have an instance name
+
+Elaborating module <hex_encoder>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <main>.
+    Related source file is "I:\Dev\basic_io_edu\source\main.v".
+WARNING:Xst:647 - Input <sw<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <main> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "I:\Dev\basic_io_edu\source\counter.v".
+    Found 1-bit register for signal <enable>.
+    Found 1-bit register for signal <leds<1>>.
+    Found 1-bit register for signal <leds<0>>.
+    Found 14-bit register for signal <counter>.
+    Found 1-bit register for signal <prev>.
+    Found 26-bit register for signal <clk_slow>.
+    Found 15-bit subtractor for signal <GND_2_o_GND_2_o_sub_5_OUT> created at line 50.
+    Found 26-bit adder for signal <clk_slow[25]_GND_2_o_add_1_OUT> created at line 23.
+    Found 15-bit adder for signal <n0055[14:0]> created at line 52.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  44 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <counter> synthesized.
+
+Synthesizing Unit <sseg_module>.
+    Related source file is "I:\Dev\basic_io_edu\source\sseg_module.v".
+    Found 2-bit register for signal <digit>.
+    Found 18-bit register for signal <count>.
+    Found 18-bit adder for signal <count[17]_GND_3_o_add_1_OUT> created at line 16.
+    Found 2-bit adder for signal <digit[1]_GND_3_o_add_4_OUT> created at line 19.
+    Found 4x4-bit Read Only RAM for signal <sseg_sel>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+Unit <sseg_module> synthesized.
+
+Synthesizing Unit <hex_encoder>.
+    Related source file is "I:\Dev\basic_io_edu\source\hex_encoder.v".
+    Found 16x8-bit Read Only RAM for signal <code>
+    Found 1-bit 4-to-1 multiplexer for signal <temp<3>> created at line 21.
+    Found 1-bit 4-to-1 multiplexer for signal <temp<2>> created at line 21.
+    Found 1-bit 4-to-1 multiplexer for signal <temp<1>> created at line 21.
+    Found 1-bit 4-to-1 multiplexer for signal <temp<0>> created at line 21.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Multiplexer(s).
+Unit <hex_encoder> synthesized.
+
+Synthesizing Unit <mod_14u_4u>.
+    Related source file is "".
+    Found 18-bit adder for signal <n0565> created at line 0.
+    Found 18-bit adder for signal <GND_5_o_b[3]_add_1_OUT> created at line 0.
+    Found 17-bit adder for signal <n0569> created at line 0.
+    Found 17-bit adder for signal <GND_5_o_b[3]_add_3_OUT> created at line 0.
+    Found 16-bit adder for signal <n0573> created at line 0.
+    Found 16-bit adder for signal <GND_5_o_b[3]_add_5_OUT> created at line 0.
+    Found 15-bit adder for signal <n0577> created at line 0.
+    Found 15-bit adder for signal <GND_5_o_b[3]_add_7_OUT> created at line 0.
+    Found 14-bit adder for signal <n0581> created at line 0.
+    Found 14-bit adder for signal <a[13]_b[3]_add_9_OUT> created at line 0.
+    Found 14-bit adder for signal <n0585> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_5_o_add_11_OUT> created at line 0.
+    Found 14-bit adder for signal <n0589> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_5_o_add_13_OUT> created at line 0.
+    Found 14-bit adder for signal <n0593> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_5_o_add_15_OUT> created at line 0.
+    Found 14-bit adder for signal <n0597> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_5_o_add_17_OUT> created at line 0.
+    Found 14-bit adder for signal <n0601> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_5_o_add_19_OUT> created at line 0.
+    Found 14-bit adder for signal <n0605> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_5_o_add_21_OUT> created at line 0.
+    Found 14-bit adder for signal <n0609> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_5_o_add_23_OUT> created at line 0.
+    Found 14-bit adder for signal <n0613> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_5_o_add_25_OUT> created at line 0.
+    Found 14-bit adder for signal <n0617> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_5_o_add_27_OUT> created at line 0.
+    Found 14-bit adder for signal <n0621> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_5_o_add_29_OUT> created at line 0.
+    Found 18-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Summary:
+	inferred  30 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
+	inferred 197 Multiplexer(s).
+Unit <mod_14u_4u> synthesized.
+
+Synthesizing Unit <div_14u_4u>.
+    Related source file is "".
+    Found 18-bit adder for signal <GND_6_o_b[3]_add_1_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_6_o_b[3]_add_3_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_6_o_b[3]_add_5_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_6_o_b[3]_add_7_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_b[3]_add_9_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_6_o_add_11_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_6_o_add_13_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_6_o_add_15_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_6_o_add_17_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_6_o_add_19_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_6_o_add_21_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_6_o_add_23_OUT[13:0]> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_6_o_add_25_OUT[13:0]> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_6_o_add_27_OUT[13:0]> created at line 0.
+    Found 18-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Summary:
+	inferred  14 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
+	inferred 157 Multiplexer(s).
+Unit <div_14u_4u> synthesized.
+
+Synthesizing Unit <div_14u_7u>.
+    Related source file is "".
+    Found 21-bit adder for signal <GND_7_o_b[6]_add_1_OUT> created at line 0.
+    Found 20-bit adder for signal <GND_7_o_b[6]_add_3_OUT> created at line 0.
+    Found 19-bit adder for signal <GND_7_o_b[6]_add_5_OUT> created at line 0.
+    Found 18-bit adder for signal <GND_7_o_b[6]_add_7_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_7_o_b[6]_add_9_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_7_o_b[6]_add_11_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_7_o_b[6]_add_13_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_b[6]_add_15_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_7_o_add_17_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_7_o_add_19_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_7_o_add_21_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_7_o_add_23_OUT[13:0]> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_7_o_add_25_OUT[13:0]> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_7_o_add_27_OUT[13:0]> created at line 0.
+    Found 21-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Summary:
+	inferred  14 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
+	inferred 157 Multiplexer(s).
+Unit <div_14u_7u> synthesized.
+
+Synthesizing Unit <div_14u_10u>.
+    Related source file is "".
+    Found 24-bit adder for signal <GND_8_o_b[9]_add_1_OUT> created at line 0.
+    Found 23-bit adder for signal <GND_8_o_b[9]_add_3_OUT> created at line 0.
+    Found 22-bit adder for signal <GND_8_o_b[9]_add_5_OUT> created at line 0.
+    Found 21-bit adder for signal <GND_8_o_b[9]_add_7_OUT> created at line 0.
+    Found 20-bit adder for signal <GND_8_o_b[9]_add_9_OUT> created at line 0.
+    Found 19-bit adder for signal <GND_8_o_b[9]_add_11_OUT> created at line 0.
+    Found 18-bit adder for signal <GND_8_o_b[9]_add_13_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_8_o_b[9]_add_15_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_8_o_b[9]_add_17_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_8_o_b[9]_add_19_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_b[9]_add_21_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_8_o_add_23_OUT[13:0]> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_8_o_add_25_OUT[13:0]> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_8_o_add_27_OUT[13:0]> created at line 0.
+    Found 24-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Summary:
+	inferred  14 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
+	inferred 157 Multiplexer(s).
+Unit <div_14u_10u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x8-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 167
+ 14-bit adder                                          : 109
+ 15-bit adder                                          : 12
+ 15-bit subtractor                                     : 1
+ 16-bit adder                                          : 11
+ 17-bit adder                                          : 11
+ 18-bit adder                                          : 12
+ 19-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 20-bit adder                                          : 2
+ 21-bit adder                                          : 2
+ 22-bit adder                                          : 1
+ 23-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 26-bit adder                                          : 1
+# Registers                                            : 8
+ 1-bit register                                        : 4
+ 14-bit register                                       : 1
+ 18-bit register                                       : 1
+ 2-bit register                                        : 1
+ 26-bit register                                       : 1
+# Comparators                                          : 105
+ 14-bit comparator lessequal                           : 68
+ 15-bit comparator lessequal                           : 7
+ 16-bit comparator lessequal                           : 7
+ 17-bit comparator lessequal                           : 7
+ 18-bit comparator lessequal                           : 7
+ 19-bit comparator lessequal                           : 2
+ 20-bit comparator lessequal                           : 2
+ 21-bit comparator lessequal                           : 2
+ 22-bit comparator lessequal                           : 1
+ 23-bit comparator lessequal                           : 1
+ 24-bit comparator lessequal                           : 1
+# Multiplexers                                         : 1266
+ 1-bit 2-to-1 multiplexer                              : 1246
+ 1-bit 4-to-1 multiplexer                              : 4
+ 14-bit 2-to-1 multiplexer                             : 10
+ 32-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <clk_slow>: 1 register on signal <clk_slow>.
+Unit <counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hex_encoder>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_code> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <temp>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <code>          |          |
+    -----------------------------------------------------------------------
+Unit <hex_encoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sseg_module>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <digit>: 1 register on signal <digit>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_sseg_sel> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <digit>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <sseg_sel>      |          |
+    -----------------------------------------------------------------------
+Unit <sseg_module> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x8-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 104
+ 14-bit adder                                          : 42
+ 14-bit adder carry in                                 : 56
+ 15-bit adder                                          : 1
+ 15-bit subtractor                                     : 1
+ 4-bit adder carry in                                  : 4
+# Counters                                             : 3
+ 18-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+# Comparators                                          : 105
+ 14-bit comparator lessequal                           : 68
+ 15-bit comparator lessequal                           : 7
+ 16-bit comparator lessequal                           : 7
+ 17-bit comparator lessequal                           : 7
+ 18-bit comparator lessequal                           : 7
+ 19-bit comparator lessequal                           : 2
+ 20-bit comparator lessequal                           : 2
+ 21-bit comparator lessequal                           : 2
+ 22-bit comparator lessequal                           : 1
+ 23-bit comparator lessequal                           : 1
+ 24-bit comparator lessequal                           : 1
+# Multiplexers                                         : 1266
+ 1-bit 2-to-1 multiplexer                              : 1246
+ 1-bit 4-to-1 multiplexer                              : 4
+ 14-bit 2-to-1 multiplexer                             : 10
+ 32-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main> ...
+
+Optimizing unit <counter> ...
+
+Optimizing unit <hex_encoder> ...
+
+Optimizing unit <mod_14u_4u> ...
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_10> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_10> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_11> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_11> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_12> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_12> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_13> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_13> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_14> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_14> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_15> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_15> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_16> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_16> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_17> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_17> 
+INFO:Xst:2261 - The FF/Latch <_i000001/leds_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/enable> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_0> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_1> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_2> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_3> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_4> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_4> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_5> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_6> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_6> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_7> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_8> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_8> 
+INFO:Xst:2261 - The FF/Latch <_i000001/_i000016/count_9> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <_i000001/clk_slow_9> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 17.
+FlipFlop _i000001/counter_11 has been replicated 1 time(s)
+FlipFlop _i000001/counter_12 has been replicated 1 time(s)
+FlipFlop _i000001/counter_3 has been replicated 1 time(s)
+FlipFlop _i000001/counter_4 has been replicated 1 time(s)
+FlipFlop _i000001/counter_5 has been replicated 2 time(s)
+FlipFlop _i000001/counter_6 has been replicated 2 time(s)
+FlipFlop _i000001/counter_7 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 55
+ Flip-Flops                                            : 55
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1195
+#      GND                         : 1
+#      INV                         : 27
+#      LUT1                        : 57
+#      LUT2                        : 20
+#      LUT3                        : 122
+#      LUT4                        : 66
+#      LUT5                        : 199
+#      LUT6                        : 191
+#      MUXCY                       : 247
+#      MUXF7                       : 13
+#      VCC                         : 1
+#      XORCY                       : 251
+# FlipFlops/Latches                : 55
+#      FD                          : 34
+#      FDR                         : 3
+#      FDRE                        : 18
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 3
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              54  out of  11440     0%  
+ Number of Slice LUTs:                  682  out of   5720    11%  
+    Number used as Logic:               682  out of   5720    11%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    689
+   Number with an unused Flip Flop:     635  out of    689    92%  
+   Number with an unused LUT:             7  out of    689     1%  
+   Number of fully used LUT-FF pairs:    47  out of    689     6%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          19
+ Number of bonded IOBs:                  18  out of    102    17%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)          | Load  |
+-----------------------------------+--------------------------------+-------+
+_i000001/_i000016/count_17         | NONE(_i000001/_i000016/digit_1)| 2     |
+clk                                | BUFGP                          | 53    |
+-----------------------------------+--------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.495ns (Maximum Frequency: 181.984MHz)
+   Minimum input arrival time before clock: 4.461ns
+   Maximum output required time after clock: 40.748ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock '_i000001/_i000016/count_17'
+  Clock period: 2.542ns (frequency: 393.391MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.542ns (Levels of Logic = 1)
+  Source:            _i000001/_i000016/digit_0 (FF)
+  Destination:       _i000001/_i000016/digit_0 (FF)
+  Source Clock:      _i000001/_i000016/count_17 rising
+  Destination Clock: _i000001/_i000016/count_17 rising
+
+  Data Path: _i000001/_i000016/digit_0 to _i000001/_i000016/digit_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.525   1.007  _i000001/_i000016/digit_0 (_i000001/_i000016/digit_0)
+     INV:I->O              1   0.255   0.681  _i000001/_i000016/Mcount_digit_xor<0>11_INV_0 (_i000001/Result<0>2)
+     FD:D                      0.074          _i000001/_i000016/digit_0
+    ----------------------------------------
+    Total                      2.542ns (0.854ns logic, 1.688ns route)
+                                       (33.6% logic, 66.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.495ns (frequency: 181.984MHz)
+  Total number of paths / destination ports: 1503 / 72
+-------------------------------------------------------------------------
+Delay:               5.495ns (Levels of Logic = 4)
+  Source:            _i000001/counter_5_1 (FF)
+  Destination:       _i000001/counter_13 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: _i000001/counter_5_1 to _i000001/counter_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.525   1.137  _i000001/counter_5_1 (_i000001/counter_5_1)
+     LUT6:I0->O            2   0.254   0.834  _i000001/GND_2_o_GND_2_o_equal_4_o<13>11 (_i000001/GND_2_o_GND_2_o_equal_4_o<13>1)
+     LUT6:I4->O           14   0.250   1.235  _i000001/GND_2_o_GND_2_o_equal_7_o<13> (_i000001/GND_2_o_GND_2_o_equal_7_o)
+     LUT5:I3->O            1   0.250   0.682  _i000001/Mmux_GND_2_o_GND_2_o_mux_9_OUT21 (_i000001/GND_2_o_GND_2_o_mux_9_OUT<10>)
+     LUT6:I5->O            1   0.254   0.000  _i000001/counter_10_glue_rst (_i000001/counter_10_glue_rst)
+     FD:D                      0.074          _i000001/counter_10
+    ----------------------------------------
+    Total                      5.495ns (1.607ns logic, 3.888ns route)
+                                       (29.2% logic, 70.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 65 / 47
+-------------------------------------------------------------------------
+Offset:              4.461ns (Levels of Logic = 3)
+  Source:            sw<1> (PAD)
+  Destination:       _i000001/counter_2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<1> to _i000001/counter_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   1.328   1.418  sw_1_IBUF (sw_1_IBUF)
+     LUT6:I4->O            1   0.250   1.137  _i000001/Mmux_GND_2_o_GND_2_o_mux_9_OUT61_SW3 (N71)
+     LUT6:I0->O            1   0.254   0.000  _i000001/counter_1_glue_rst (_i000001/counter_1_glue_rst)
+     FD:D                      0.074          _i000001/counter_1
+    ----------------------------------------
+    Total                      4.461ns (1.906ns logic, 2.555ns route)
+                                       (42.7% logic, 57.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 255988153647 / 9
+-------------------------------------------------------------------------
+Offset:              40.748ns (Levels of Logic = 27)
+  Source:            _i000001/counter_10 (FF)
+  Destination:       sseg<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: _i000001/counter_10 to sseg<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              42   0.525   1.963  _i000001/counter_10 (_i000001/counter_10)
+     LUT4:I0->O            5   0.254   1.271  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Mmux_a[10]_a[13]_MUX_220_o11 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/a[10]_a[13]_MUX_220_o)
+     LUT5:I0->O           13   0.254   1.553  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Mmux_a[10]_a[13]_MUX_234_o11 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Madd_a[13]_GND_5_o_add_15_OUT_Madd_lut<10>)
+     LUT6:I0->O            7   0.254   1.018  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0008_INV_135_o11 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0008_INV_135_o)
+     LUT3:I1->O            1   0.250   1.112  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Mmux_a[10]_a[13]_MUX_248_o11 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/a[10]_a[13]_MUX_248_o)
+     LUT6:I1->O           28   0.254   1.681  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0009_INV_150_o1 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0009_INV_150_o)
+     LUT3:I0->O            1   0.235   0.958  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Mmux_a[6]_a[13]_MUX_266_o11 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Madd_a[13]_GND_5_o_add_19_OUT_Madd_lut<6>)
+     LUT6:I2->O            2   0.254   0.726  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0010_INV_165_o1_SW0 (N58)
+     LUT6:I5->O            1   0.254   0.000  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0010_INV_165_o1_G (N113)
+     MUXF7:I1->O          23   0.175   1.788  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0010_INV_165_o1 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0010_INV_165_o)
+     LUT5:I0->O            5   0.254   1.296  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Mmux_a[7]_a[13]_MUX_279_o11 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Madd_a[13]_GND_5_o_add_21_OUT_Madd_lut<7>)
+     LUT6:I0->O            1   0.254   0.682  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0011_INV_180_o2_SW0 (N66)
+     LUT6:I5->O           38   0.254   2.050  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0011_INV_180_o2 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0011_INV_180_o)
+     LUT5:I0->O            5   0.254   1.117  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Mmux_a[5]_a[13]_MUX_295_o11 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/a[5]_a[13]_MUX_295_o)
+     LUT5:I1->O            1   0.254   0.682  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0012_INV_195_o2_SW0 (N64)
+     LUT6:I5->O           30   0.254   1.917  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0012_INV_195_o2 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0012_INV_195_o)
+     LUT5:I0->O            3   0.254   1.196  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Mmux_a[4]_a[13]_MUX_310_o11 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/a[4]_a[13]_MUX_310_o)
+     LUT6:I1->O            1   0.254   0.682  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0013_INV_210_o2_SW0 (N62)
+     LUT6:I5->O           27   0.254   1.866  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0013_INV_210_o2 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0013_INV_210_o)
+     LUT5:I0->O            2   0.254   1.002  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Mmux_a[0]_a[13]_MUX_328_o131 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/a[3]_a[13]_MUX_325_o)
+     LUT6:I2->O            1   0.254   1.137  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0014_INV_225_o24_SW0 (N90)
+     LUT6:I0->O            5   0.254   1.271  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0014_INV_225_o24 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0014_INV_225_o)
+     LUT5:I0->O            2   0.254   1.156  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/Mmux_a[0]_a[13]_MUX_342_o121 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/a[2]_a[13]_MUX_340_o)
+     LUT6:I1->O            3   0.254   0.994  _i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0015_INV_240_o26 (_i000001/_i000016/_i000008/number[13]_PWR_5_o_mod_0/BUS_0015_INV_240_o)
+     LUT5:I2->O            1   0.235   0.000  _i000001/_i000016/_i000008/Mmux_temp<2>15_F (N104)
+     MUXF7:I0->O           7   0.163   1.138  _i000001/_i000016/_i000008/Mmux_temp<2>15 (_i000001/_i000016/_i000008/temp<2>)
+     LUT4:I1->O            1   0.235   0.681  _i000001/_i000016/_i000008/Mram_code41 (sseg_4_OBUF)
+     OBUF:I->O                 2.912          sseg_4_OBUF (sseg<4>)
+    ----------------------------------------
+    Total                     40.748ns (9.810ns logic, 30.938ns route)
+                                       (24.1% logic, 75.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_i000001/_i000016/count_17'
+  Total number of paths / destination ports: 85 / 11
+-------------------------------------------------------------------------
+Offset:              7.486ns (Levels of Logic = 4)
+  Source:            _i000001/_i000016/digit_1 (FF)
+  Destination:       sseg<6> (PAD)
+  Source Clock:      _i000001/_i000016/count_17 rising
+
+  Data Path: _i000001/_i000016/digit_1 to sseg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              12   0.525   1.499  _i000001/_i000016/digit_1 (_i000001/_i000016/digit_1)
+     LUT5:I0->O            1   0.254   0.000  _i000001/_i000016/_i000008/Mmux_temp<3>15_G (N103)
+     MUXF7:I1->O           7   0.175   1.186  _i000001/_i000016/_i000008/Mmux_temp<3>15 (_i000001/_i000016/_i000008/temp<3>)
+     LUT4:I0->O            1   0.254   0.681  _i000001/_i000016/_i000008/Mram_code31 (sseg_3_OBUF)
+     OBUF:I->O                 2.912          sseg_3_OBUF (sseg<3>)
+    ----------------------------------------
+    Total                      7.486ns (4.120ns logic, 3.366ns route)
+                                       (55.0% logic, 45.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock _i000001/_i000016/count_17
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+_i000001/_i000016/count_17|    2.542|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.495|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.87 secs
+ 
+--> 
+
+Total memory usage is 263264 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :   22 (   0 filtered)
+

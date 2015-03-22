@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=I:\Dev\basic_io_edu\main.ncd
+OUTFILE=I:\Dev\basic_io_edu\main.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=I:\Dev\basic_io_edu
+LICENSE=WebPack
+USER_INFO=211007416_0_0_557

@@ -1,0 +1,16 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Feb 14 09:26:32 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SW<1>" LOCATE = SITE "P100" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "P105" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "P104" LEVEL 1;
+COMP "OSC_FPGA" LOCATE = SITE "P85" LEVEL 1;
+COMP "PB<0>" LOCATE = SITE "P102" LEVEL 1;
+PIN PB<0>_pin<0> = BEL "PB<0>" PINNAME PAD;
+PIN "PB<0>_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "PB<1>" LOCATE = SITE "P101" LEVEL 1;
+COMP "SW<0>" LOCATE = SITE "P99" LEVEL 1;
+SCHEMATIC END;
+

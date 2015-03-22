@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.ncd
+OUTFILE=E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave
+LICENSE=WebPack
+USER_INFO=211007416_0_0_557

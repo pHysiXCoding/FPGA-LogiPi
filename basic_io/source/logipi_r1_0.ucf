@@ -1,0 +1,25 @@
+##############################################################################
+# Timing Constraints #
+##############################################################################
+
+##### Grouping Constraints #####
+NET OSC_FPGA TNM_NET = clk50_grp;
+
+##### Clock Period Constraints #####
+TIMESPEC TS_PER_CLK50 = PERIOD "clk50_grp" 20.0 ns ;
+
+NET "PB<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+
+##############################################################################
+# Pin LOC Constraints #
+##############################################################################
+NET "OSC_FPGA"      	LOC = "P85" 		| IOSTANDARD = LVTTL;
+
+#Peripherals#############################################################
+NET "LED<0>"       		LOC = "P105" 		| IOSTANDARD = LVTTL;		#SHARED WITH ARD_D6
+NET "LED<1>"       		LOC = "P104" 		| IOSTANDARD = LVTTL;		#SHARED WITH ARD_D7
+NET "PB<0>"        		LOC = "P102" 		| IOSTANDARD = LVTTL;
+NET "PB<1>"        		LOC = "P101" 		| IOSTANDARD = LVTTL;
+NET "SW<0>"        		LOC = "P99" 		| IOSTANDARD = LVTTL;
+NET "SW<1>"        		LOC = "P100" 		| IOSTANDARD = LVTTL;
+	

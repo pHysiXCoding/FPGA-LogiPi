@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Mar 22 13:21:46 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SW<1>" LOCATE = SITE "P100" LEVEL 1;
+COMP "iCLK_50" LOCATE = SITE "P85" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "P105" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "P104" LEVEL 1;
+COMP "PB<0>" LOCATE = SITE "P102" LEVEL 1;
+COMP "PB<1>" LOCATE = SITE "P101" LEVEL 1;
+COMP "SW<0>" LOCATE = SITE "P99" LEVEL 1;
+SCHEMATIC END;
+

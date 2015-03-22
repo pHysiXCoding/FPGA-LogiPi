@@ -1,0 +1,4 @@
+verilog work "source/hex_encoder.v"
+verilog work "source/sseg_module.v"
+verilog work "source/counter.v"
+verilog work "source/main.v"
