@@ -3,12 +3,12 @@
 ##############################################################################
 
 ###### Grouping Constraints #####
-#NET OSC_FPGA TNM_NET = clk50_grp;
+NET iCLK_50 TNM_NET = clk50_grp;
 ##NET DRAM_CLK TNM_NET = clk100_grp;
 ##NET SYS_SPI_SCK TNM_NET = clk32_grp;
 #
 ###### Clock Period Constraints #####
-#TIMESPEC TS_PER_CLK50 = PERIOD "clk50_grp" 20.0 ns ;
+TIMESPEC TS_PER_CLK50 = PERIOD "clk50_grp" 20.0 ns ;
 ##TIMESPEC TS_PER_CLK100 = PERIOD "clk100_grp" 10.0 ns;
 ##TIMESPEC TS_PER_CLK32 = PERIOD "clk32_grp" 20.0 ns;
 ###PIN "sys_clocks_gen/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
@@ -17,11 +17,13 @@
 ###############################################################################
 ## Pin LOC Constraints #
 ###############################################################################
-#NET "OSC_FPGA"      	LOC = "P85" 		| IOSTANDARD = LVTTL;
+NET "iCLK_50"      	LOC = "P85" 		| IOSTANDARD = LVTTL;
 
-NET "iCLK_50" TNM_NET = iclk50_grp;
-TIMESPEC TS_iclk50_grp = PERIOD "iCLK_50" 50 MHz HIGH 50%;
-NET "iCLK_50" LOC = "P85";
+#NET "iCLK_50" TNM_NET = iclk50_grp;
+#
+#TIMESPEC TS_iclk50_grp = PERIOD "iclk50_grp" 50 MHz HIGH 50%;
+#
+#NET "iCLK_50" LOC = "P85";
 
 
 #Peripherals#############################################################
@@ -81,14 +83,15 @@ NET "SW<1>"        		LOC = "P100" 		| IOSTANDARD = LVTTL;
 #NET "SDRAM_DQ<15>"		LOC = "P55"			| IOSTANDARD = LVTTL ;
 
 #PMOD1#############################################################################
-#NET "PMOD1<0>" 			LOC = "P5" 			| IOSTANDARD = LVTTL;
-#NET "PMOD1<1>" 			LOC = "P2" 			| IOSTANDARD = LVTTL;
-#NET "PMOD1<2>" 			LOC = "P1" 			| IOSTANDARD = LVTTL;
-#NET "PMOD1<3>" 			LOC = "P16" 		| IOSTANDARD = LVTTL;
-#NET "PMOD1<4>"				LOC = "P88" 		| IOSTANDARD = LVTTL;
-#NET "PMOD1<5>" 			LOC = "P92" 		| IOSTANDARD = LVTTL;
-#NET "PMOD1<6>" 			LOC = "P93" 		| IOSTANDARD = LVTTL;
-#NET "PMOD1<7>" 			LOC = "P94" 		| IOSTANDARD = LVTTL;
+NET "PMOD1<0>" 			LOC = "P5" 			| IOSTANDARD = LVTTL;
+NET "PMOD1<1>" 			LOC = "P2" 			| IOSTANDARD = LVTTL;
+NET "PMOD1<2>" 			LOC = "P1" 			| IOSTANDARD = LVTTL;
+NET "PMOD1<3>" 			LOC = "P16" 		| IOSTANDARD = LVTTL;
+NET "PMOD1<4>"				LOC = "P88" 		| IOSTANDARD = LVTTL;
+NET "PMOD1<5>" 			LOC = "P92" 		| IOSTANDARD = LVTTL;
+NET "PMOD1<6>" 			LOC = "P93" 		| IOSTANDARD = LVTTL;
+NET "PMOD1<7>" 			LOC = "P94" 		| IOSTANDARD = LVTTL;
+NET "PMOD1<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 ##PMOD2#############################################################################
 #NET "PMOD2<0>" 			LOC = "P142" 		| IOSTANDARD = LVTTL;
 #NET "PMOD2<1>" 			LOC = "P141" 		| IOSTANDARD = LVTTL;

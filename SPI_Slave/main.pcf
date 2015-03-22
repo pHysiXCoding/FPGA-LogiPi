@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Mar 22 13:21:46 2015
+// Written by: Map P.20131013 on Sun Mar 22 22:27:39 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -7,8 +7,34 @@ COMP "SW<1>" LOCATE = SITE "P100" LEVEL 1;
 COMP "iCLK_50" LOCATE = SITE "P85" LEVEL 1;
 COMP "LED<0>" LOCATE = SITE "P105" LEVEL 1;
 COMP "LED<1>" LOCATE = SITE "P104" LEVEL 1;
+COMP "PMOD1<0>" LOCATE = SITE "P5" LEVEL 1;
+PIN PMOD1<0>_pin<0> = BEL "PMOD1<0>" PINNAME PAD;
+PIN "PMOD1<0>_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "PMOD1<1>" LOCATE = SITE "P2" LEVEL 1;
 COMP "PB<0>" LOCATE = SITE "P102" LEVEL 1;
+COMP "PMOD1<2>" LOCATE = SITE "P1" LEVEL 1;
+COMP "PMOD1<3>" LOCATE = SITE "P16" LEVEL 1;
 COMP "PB<1>" LOCATE = SITE "P101" LEVEL 1;
+COMP "PMOD1<4>" LOCATE = SITE "P88" LEVEL 1;
+COMP "PMOD1<5>" LOCATE = SITE "P92" LEVEL 1;
+COMP "PMOD1<6>" LOCATE = SITE "P93" LEVEL 1;
+COMP "PMOD1<7>" LOCATE = SITE "P94" LEVEL 1;
 COMP "SW<0>" LOCATE = SITE "P99" LEVEL 1;
+TIMEGRP clknetwork_clkfx = BEL "SSELr_2" BEL "clknetwork/clkout2_buf" BEL
+        "LED_0" BEL "byte_data_sent_1" BEL "byte_data_sent_2" BEL
+        "byte_data_sent_3" BEL "byte_data_sent_4" BEL "byte_data_sent_5" BEL
+        "byte_data_sent_6" BEL "byte_data_sent_7" BEL "byte_data_sent_8" BEL
+        "byte_data_sent_9" BEL "byte_data_sent_10" BEL "byte_data_sent_11" BEL
+        "byte_data_sent_12" BEL "byte_data_sent_13" BEL "byte_data_sent_14"
+        BEL "byte_data_sent_15" BEL "Mshreg_SSELr_1" BEL "SSELr_1";
+PIN SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0> = BEL "SP6_BUFIO_INSERT_ML_BUFIO2_0"
+        PINNAME DIVCLK;
+PIN clknetwork/dcm_sp_inst_pins<3> = BEL "clknetwork/dcm_sp_inst" PINNAME
+        CLKIN;
+TIMEGRP clk50_grp = PIN "SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0>" PIN
+        "clknetwork/dcm_sp_inst_pins<3>";
+TS_PER_CLK50 = PERIOD TIMEGRP "clk50_grp" 20 ns HIGH 50%;
+TS_clknetwork_clkfx = PERIOD TIMEGRP "clknetwork_clkfx" TS_PER_CLK50 / 0.4
+        HIGH 50%;
 SCHEMATIC END;
 

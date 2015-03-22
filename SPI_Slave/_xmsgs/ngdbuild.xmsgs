@@ -5,17 +5,27 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="NgdBuild" num="578" delta="old" >Design contains no instances.
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk50_grp</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_PER_CLK50</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">clknetwork/dcm_sp_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
+<arg fmt="%s" index="7">CLKFX</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clknetwork_clkfx = PERIOD &quot;clknetwork_clkfx&quot; TS_PER_CLK50 / 0.4 HIGH 50%&gt;</arg>
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="137" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;iCLK_50&quot; TNM_NET = iclk50_grp;&gt; [logipi_r1_0.ucf(22)]</arg>: No appropriate instances for the TNM constraint are driven by &quot;<arg fmt="%s" index="2">iCLK_50</arg>&quot;.
+<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">PMOD1&lt;7&gt;</arg>&apos; has no legal driver
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="56" delta="new" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_iclk50_grp = PERIOD &quot;iCLK_50&quot; 50 MHz HIGH 50%;&gt; [logipi_r1_0.ucf(23)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">iCLK_50</arg>&apos;.
+<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">PMOD1&lt;6&gt;</arg>&apos; has no legal driver
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="194" delta="new" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">iclk50_grp</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMs and is not actively used by any referencing constraint.
- </msg>
+<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">PMOD1&lt;5&gt;</arg>&apos; has no legal driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">PMOD1&lt;4&gt;</arg>&apos; has no legal driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">PMOD1&lt;3&gt;</arg>&apos; has no legal driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">PMOD1&lt;1&gt;</arg>&apos; has no legal driver
+</msg>
 
 </messages>
 

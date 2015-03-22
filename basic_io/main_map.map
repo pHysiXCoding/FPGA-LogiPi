@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sat Feb 14 09:26:28 2015
+Mapped Date    : Sun Mar 22 18:13:55 2015
 
 Mapping design into LUTs...
 Running directed packing...
@@ -109,10 +109,10 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                0.40
+Average Fanout of Non-Clock Nets:                0.00
 
-Peak Memory Usage:  347 MB
-Total REAL time to MAP completion:  4 secs 
+Peak Memory Usage:  353 MB
+Total REAL time to MAP completion:  3 secs 
 Total CPU time to MAP completion:   3 secs 
 
 Mapping completed.

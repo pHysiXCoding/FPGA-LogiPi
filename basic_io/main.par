@@ -1,13 +1,13 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-MRBIGBEAR-PC::  Sat Feb 14 09:26:34 2015
+MRBIGBEAR-PC::  Sun Mar 22 18:14:01 2015
 
 par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
 
 
 Constraints file: main.pcf.
-Loading device for application Rf_Device from file '6slx9.nph' in environment I:\Xilinx\14.7\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '6slx9.nph' in environment E:\Xilinx\14.7\ISE_DS\ISE\.
    "main" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
@@ -68,17 +68,19 @@ Router effort level (-rl):    High
 Starting initial Timing Analysis.  REAL time: 2 secs 
 Finished initial Timing Analysis.  REAL time: 2 secs 
 
+WARNING:Par:288 - The signal SW<1>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal OSC_FPGA_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal PB<0>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal PB<1>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal SW<0>_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 2 unrouted;      REAL time: 2 secs 
+Phase  1  : 2 unrouted;      REAL time: 3 secs 
 
-Phase  2  : 2 unrouted;      REAL time: 2 secs 
+Phase  2  : 2 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 0 unrouted;      REAL time: 2 secs 
+Phase  3  : 0 unrouted;      REAL time: 3 secs 
 
 Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
@@ -115,18 +117,18 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 3 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 5 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 3 secs 
+Total REAL time to PAR completion: 4 secs 
 Total CPU time to PAR completion: 3 secs 
 
-Peak Memory Usage:  316 MB
+Peak Memory Usage:  323 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 5
+Number of warning messages: 7
 Number of info messages: 2
 
 Writing design to file main.ncd

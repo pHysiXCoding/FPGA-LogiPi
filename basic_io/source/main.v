@@ -32,6 +32,8 @@ module main(OSC_FPGA, LED, PB, SW);
 	
 	//assign LED = counter_pb;
 	
-	assign LED = SW;
+	//assign LED = SW;
+	assign LED[0] = 1;
+	assign LED[1] = 0;
 	
 endmodule

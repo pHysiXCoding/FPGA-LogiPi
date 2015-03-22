@@ -2,7 +2,7 @@
 <BODY TEXT='#000000' BGCOLOR='#FFFFFF' LINK='#0000EE' VLINK='#551A8B' ALINK='#FF0000'>
 <TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'>
-<TD ALIGN=CENTER COLSPAN='4'><B>main Project Status (02/14/2015 - 09:18:02)</B></TD></TR>
+<TD ALIGN=CENTER COLSPAN='4'><B>main Project Status (03/22/2015 - 18:14:27)</B></TD></TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project File:</B></TD>
 <TD>basic_io.xise</TD>
@@ -25,14 +25,14 @@ No Errors</TD>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Product Version:</B></TD><TD>ISE 14.7</TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Warnings:</B></LI></UL></TD>
-<TD ALIGN=LEFT><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\_xmsgs/*.xmsgs?&DataKey=Warning'>11 Warnings (5 new)</A></TD>
+<TD ALIGN=LEFT><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\_xmsgs/*.xmsgs?&DataKey=Warning'>14 Warnings (0 new)</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Design Goal:</B></dif></TD>
 <TD>Balanced</TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Routing Results:</B></LI></UL></TD>
 <TD>
-<A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main.unroutes'>All Signals Completely Routed</A></TD>
+<A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main.unroutes'>All Signals Completely Routed</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Design Strategy:</B></dif></TD>
@@ -43,11 +43,11 @@ No Errors</TD>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Environment:</B></dif></TD>
 <TD>
-<A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main_envsettings.html'>
+<A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main_envsettings.html'>
 System Settings</A>
 </TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Final Timing Score:</B></LI></UL></TD>
-<TD>0 &nbsp;<A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main.twx?&DataKey=XmlTimingReport'>(Timing Report)</A></TD>
+<TD>0 &nbsp;<A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main.twx?&DataKey=XmlTimingReport'>(Timing Report)</A></TD>
 </TR>
 </TABLE>
 
@@ -56,19 +56,22 @@ System Settings</A>
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='2'><B>Current Warnings</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=CurrentWarnings"><B>[-]</B></a></TD></TR>
 <TR ALIGN=LEFT BGCOLOR='#FFFF99'><TD><B>Synthesis Warnings</B></TD><TD COLSPAN='2'><B>New</B></TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:647: - Input &lt;PB&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:647: - Input &lt;OSC_FPGA&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:647: - Input &lt;PB&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:647: - Input &lt;SW&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:647: - Input &lt;OSC_FPGA&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 <TR ALIGN=LEFT BGCOLOR='#FFFF99'><TD><B>Translation Warnings</B></TD><TD COLSPAN='2'><B>New</B></TD></TR>
 <TR ALIGN=LEFT><TD>WARNING:ConstraintSystem:137: - Constraint &lt;NET OSC_FPGA TNM_NET = clk50_grp;&gt; [source/logipi_r1_0.ucf(6)]: No appropriate instances for the TNM constraint are driven by "OSC_FPGA".</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 <TR ALIGN=LEFT><TD>WARNING:ConstraintSystem:56: - Constraint &lt;TIMESPEC TS_PER_CLK50 = PERIOD "clk50_grp" 20.0 ns ;&gt; [source/logipi_r1_0.ucf(9)]: Unable to find an active 'TNM' or 'TimeGrp' constraint named 'clk50_grp'.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 <TR ALIGN=LEFT><TD>WARNING:ConstraintSystem:191: - The TNM 'clk50_grp', does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing Period constraint 'TS_PER_CLK50'. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification: &lt;TIMESPEC TS_PER_CLK50 = PERIOD "clk50_grp" 20.0 ns ;&gt; [source/logipi_r1_0.ucf(9)]</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 <TR ALIGN=LEFT><TD>WARNING:ConstraintSystem:197: - The following specification is invalid because the referenced TNM constraint was removed: &lt;TIMESPEC TS_PER_CLK50 = PERIOD "clk50_grp" 20.0 ns ;&gt; [source/logipi_r1_0.ucf(9)]</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 <TR ALIGN=LEFT BGCOLOR='#FFFF99'><TD><B>Place and Route Warnings</B></TD><TD COLSPAN='2'><B>New</B></TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Par:288: - The signal SW&lt;1&gt;_IBUF has no load. PAR will not attempt to route this signal.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 <TR ALIGN=LEFT><TD>WARNING:Par:288: - The signal OSC_FPGA_IBUF has no load. PAR will not attempt to route this signal.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Par:288: - The signal PB&lt;0&gt;_IBUF has no load. PAR will not attempt to route this signal.</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Par:288: - The signal PB&lt;0&gt;_IBUF has no load. PAR will not attempt to route this signal.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 <TR ALIGN=LEFT><TD>WARNING:Par:288: - The signal PB&lt;1&gt;_IBUF has no load. PAR will not attempt to route this signal.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:ParHelpers:361: - There are 3 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Par:283: - There are 3 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Par:288: - The signal SW&lt;0&gt;_IBUF has no load. PAR will not attempt to route this signal.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:ParHelpers:361: - There are 5 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Par:283: - There are 5 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 </TABLE>
 
 
@@ -108,7 +111,7 @@ System Settings</A>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
-<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of bonded <A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main_map.xrpt?&DataKey=IOBProperties'>IOBs</A></TD>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of bonded <A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main_map.xrpt?&DataKey=IOBProperties'>IOBs</A></TD>
 <TD ALIGN=RIGHT>7</TD>
 <TD ALIGN=RIGHT>102</TD>
 <TD ALIGN=RIGHT>6%</TD>
@@ -247,7 +250,7 @@ System Settings</A>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Average Fanout of Non-Clock Nets</TD>
-<TD ALIGN=RIGHT>0.40</TD>
+<TD ALIGN=RIGHT>0.00</TD>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
@@ -262,13 +265,13 @@ System Settings</A>
 <TD BGCOLOR='#FFFF99'><B>Final Timing Score:</B></TD>
 <TD>0 (Setup: 0, Hold: 0)</TD>
 <TD BGCOLOR='#FFFF99'><B>Pinout Data:</B></TD>
-<TD COLSPAN='2'><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main_par.xrpt?&DataKey=PinoutData'>Pinout Report</A></TD>
+<TD COLSPAN='2'><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main_par.xrpt?&DataKey=PinoutData'>Pinout Report</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Routing Results:</B></TD><TD>
-<A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main.unroutes'>All Signals Completely Routed</A></TD>
+<A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main.unroutes'>All Signals Completely Routed</A></TD>
 <TD BGCOLOR='#FFFF99'><B>Clock Data:</B></TD>
-<TD COLSPAN='2'><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main_par.xrpt?&DataKey=ClocksData'>Clock Report</A></TD>
+<TD COLSPAN='2'><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main_par.xrpt?&DataKey=ClocksData'>Clock Report</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Timing Constraints:</B></TD>
@@ -283,21 +286,21 @@ System Settings</A>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='6'><B>Detailed Reports</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=DetailedReports"><B>[-]</B></a></TD></TR>
 <TR BGCOLOR='#FFFF99'><TD><B>Report Name</B></TD><TD><B>Status</B></TD><TD><B>Generated</B></TD>
 <TD ALIGN=LEFT><B>Errors</B></TD><TD ALIGN=LEFT><B>Warnings</B></TD><TD ALIGN=LEFT COLSPAN='2'><B>Infos</B></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main.syr'>Synthesis Report</A></TD><TD>Current</TD><TD>Sat 14. Feb 09:26:22 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\_xmsgs/xst.xmsgs?&DataKey=Warning'>2 Warnings (2 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main.bld'>Translation Report</A></TD><TD>Current</TD><TD>Sat 14. Feb 09:26:28 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\_xmsgs/ngdbuild.xmsgs?&DataKey=Warning'>4 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main_map.mrp'>Map Report</A></TD><TD>Current</TD><TD>Sat 14. Feb 09:26:34 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\_xmsgs/map.xmsgs?&DataKey=Info'>8 Infos (1 new)</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main.par'>Place and Route Report</A></TD><TD>Current</TD><TD>Sat 14. Feb 09:26:40 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\_xmsgs/par.xmsgs?&DataKey=Warning'>5 Warnings (3 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\_xmsgs/par.xmsgs?&DataKey=Info'>2 Infos (0 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main.syr'>Synthesis Report</A></TD><TD>Current</TD><TD>Sun 22. Mar 18:13:48 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\_xmsgs/xst.xmsgs?&DataKey=Warning'>3 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main.bld'>Translation Report</A></TD><TD>Current</TD><TD>Sun 22. Mar 18:13:53 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\_xmsgs/ngdbuild.xmsgs?&DataKey=Warning'>4 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main_map.mrp'>Map Report</A></TD><TD>Current</TD><TD>Sun 22. Mar 18:13:59 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\_xmsgs/map.xmsgs?&DataKey=Info'>8 Infos (0 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main.par'>Place and Route Report</A></TD><TD>Current</TD><TD>Sun 22. Mar 18:14:05 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\_xmsgs/par.xmsgs?&DataKey=Warning'>7 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\_xmsgs/par.xmsgs?&DataKey=Info'>2 Infos (0 new)</A></TD></TR>
 <TR ALIGN=LEFT><TD>Power Report</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main.twr'>Post-PAR Static Timing Report</A></TD><TD>Current</TD><TD>Sat 14. Feb 09:26:44 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\_xmsgs/trce.xmsgs?&DataKey=Info'>4 Infos (0 new)</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\main.bgn'>Bitgen Report</A></TD><TD>Current</TD><TD>Sat 14. Feb 09:28:44 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main.twr'>Post-PAR Static Timing Report</A></TD><TD>Current</TD><TD>Sun 22. Mar 18:14:09 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\_xmsgs/trce.xmsgs?&DataKey=Info'>4 Infos (0 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\main.bgn'>Bitgen Report</A></TD><TD>Current</TD><TD>Sun 22. Mar 18:14:17 2015</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
 </TABLE>
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='3'><B>Secondary Reports</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=SecondaryReports"><B>[-]</B></a></TD></TR>
 <TR BGCOLOR='#FFFF99'><TD><B>Report Name</B></TD><TD><B>Status</B></TD><TD COLSPAN='2'><B>Generated</B></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\usage_statistics_webtalk.html'>WebTalk Report</A></TD><TD>Current</TD><TD COLSPAN='2'>Sat 14. Feb 09:28:44 2015</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='F:/Dev Projects/FPGA/Dev/basic_io\webtalk.log'>WebTalk Log File</A></TD><TD>Current</TD><TD COLSPAN='2'>Sat 14. Feb 09:28:52 2015</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\usage_statistics_webtalk.html'>WebTalk Report</A></TD><TD>Current</TD><TD COLSPAN='2'>Sun 22. Mar 18:14:17 2015</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\webtalk.log'>WebTalk Log File</A></TD><TD>Current</TD><TD COLSPAN='2'>Sun 22. Mar 18:14:27 2015</TD></TR>
 </TABLE>
 
 
-<br><center><b>Date Generated:</b> 03/22/2015 - 13:06:26</center>
+<br><center><b>Date Generated:</b> 03/22/2015 - 18:14:27</center>
 </BODY></HTML>

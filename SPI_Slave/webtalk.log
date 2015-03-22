@@ -4,7 +4,7 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 Project Information
 --------------------
 ProjectID=EF72BB4E68B64305BA0C1FC952CC7F55
-ProjectIteration=2
+ProjectIteration=37
 
 WebTalk Summary
 ----------------
@@ -13,4 +13,4 @@ INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:4 - E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/SPI_Slave/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2015-03-22T13:16:15.  For additional details about this file, please refer to the WebTalk help file at E:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:5 - E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/SPI_Slave/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at E:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html

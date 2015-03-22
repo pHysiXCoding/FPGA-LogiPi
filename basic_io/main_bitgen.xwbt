@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=I:\Dev\basic_io\main.ncd
-OUTFILE=I:\Dev\basic_io\main.bit
+INFILE=E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\basic_io\main.ncd
+OUTFILE=E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\basic_io\main.bit
 FAMILY=Spartan6
 PART=xc6slx9-2tqg144
-WORKINGDIR=I:\Dev\basic_io
+WORKINGDIR=E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\basic_io
 LICENSE=WebPack
 USER_INFO=211007416_0_0_557

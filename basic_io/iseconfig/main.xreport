@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-03-22T13:06:26</DateModified>
+  <DateModified>2015-03-22T18:12:33</DateModified>
   <ModuleName>main</ModuleName>
   <SummaryTimeStamp>2015-02-14T09:18:02</SummaryTimeStamp>
-  <SavedFilePath>F:/Dev Projects/FPGA/Dev/basic_io/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>F:/Dev Projects/FPGA/Dev/basic_io\</ImplementationReportsDirectory>
+  <SavedFilePath>E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io/iseconfig/main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/basic_io\</ImplementationReportsDirectory>
   <DateInitialized>2015-02-14T08:59:16</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

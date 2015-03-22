@@ -7,30 +7,28 @@ main.ngc main.ngd
 
 Reading NGO file "E:/Users/MrBigBear/My
 Documents/GitHub/FPGA-LogiPi/SPI_Slave/main.ngc" ...
-Loading design module "E:\Users\MrBigBear\My
-Documents\GitHub\FPGA-LogiPi\SPI_Slave/main.ngc"...
-WARNING:NgdBuild:578 - Design contains no instances.
 Gathering constraint information from source properties...
 Done.
 
 Annotating constraints to design from ucf file "logipi_r1_0.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
-WARNING:ConstraintSystem:137 - Constraint <NET "iCLK_50" TNM_NET = iclk50_grp;>
-   [logipi_r1_0.ucf(22)]: No appropriate instances for the TNM constraint are
-   driven by "iCLK_50".
-
-WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_iclk50_grp = PERIOD
-   "iCLK_50" 50 MHz HIGH 50%;> [logipi_r1_0.ucf(23)]: Unable to find an active
-   'TNM' or 'TimeGrp' constraint named 'iCLK_50'.
-
-WARNING:ConstraintSystem:194 - The TNM 'iclk50_grp', does not directly or
-   indirectly drive any flip-flops, latches and/or RAMs and is not actively used
-   by any referencing constraint.
+INFO:ConstraintSystem:178 - TNM 'clk50_grp', used in period specification
+   'TS_PER_CLK50', was traced into DCM_SP instance clknetwork/dcm_sp_inst. The
+   following new TNM groups and period specifications were generated at the
+   DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_clknetwork_clkfx = PERIOD "clknetwork_clkfx" TS_PER_CLK50
+   / 0.4 HIGH 50%>
 
 Done...
 
 Checking expanded design ...
+WARNING:NgdBuild:470 - bidirect pad net 'PMOD1<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'PMOD1<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'PMOD1<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'PMOD1<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'PMOD1<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'PMOD1<1>' has no legal driver
 
 Partition Implementation Status
 -------------------------------
@@ -41,7 +39,7 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   4
+  Number of warnings:   6
 
 Total memory usage is 163288 kilobytes
 

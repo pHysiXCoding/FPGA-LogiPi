@@ -1,0 +1,20 @@
+<title>Map Messages</title><table width=100%>
+<tr><td align=LEFT cellspacing=0 cellpadding=0><b>Map Messages</b></td><td><b>Sun 22. Mar 17:12:21 2015</b></td></tr></table><hr><br><table border cellspacing='0' cellpadding='0'><tr bgcolor='#DDDDDD'><td> </td><td>Map Messages - Errors, Warnings, and Infos</td><td>New</td></tr>
+<tr><td>INFO&nbsp;</td><td>LIT:243 - Logical network PB&lt;1&gt;_IBUF has no load.</td><td>&nbsp;</td></tr>
+<tr><td>INFO&nbsp;</td><td>LIT:395 - The above info message is repeated 9 more times for the following (max. 5 shown):
+PB&lt;0&gt;_IBUF,
+SW&lt;1&gt;_IBUF,
+SW&lt;0&gt;_IBUF,
+iCLK_50_IBUF,
+PMOD1&lt;7&gt;_IBUF
+To see the details of these info messages, please use the -detail switch.</td><td>&nbsp;</td></tr>
+<tr><td>INFO&nbsp;</td><td>MapLib:562 - No environment variables are currently set.</td><td>&nbsp;</td></tr>
+<tr><td>INFO&nbsp;</td><td>LIT:244 - All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.</td><td>&nbsp;</td></tr>
+<tr><td>INFO&nbsp;</td><td>Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)</td><td>&nbsp;</td></tr>
+<tr><td>INFO&nbsp;</td><td>Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)</td><td>&nbsp;</td></tr>
+<tr><td>INFO&nbsp;</td><td>Map:215 - The Interim Design Summary has been generated in the MAP Report (.mrp).</td><td>&nbsp;</td></tr>
+<tr><td>ERROR&nbsp;</td><td>Place:1108 - A clock IOB / BUFGMUX clock component pair have been found that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock IOB component &lt;PMOD1&lt;0&gt;&gt; is placed at site &lt;P5&gt;. The corresponding BUFG component &lt;PMOD1_0_IBUF_BUFG&gt; is placed at site &lt;BUFGMUX_X2Y2&gt;. There is only a select set of IOBs that can use the fast path to the Clocker buffer, and they are not being used. You may want to analyze why this problem exists and correct it. If this sub optimal condition is acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint in the .ucf file to demote this message to a WARNING and allow your design to continue. However, the use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error ...
+NOTE: This message is very long (~1 K) and has been shortened to a maximum of 1000 characters for viewing in this context.
+           Please refer to the corresponding ASCII report for the full message.
+</td><td>&nbsp;</td></tr>
+<tr><td>ERROR&nbsp;</td><td>Pack:1654 - The timing-driven placement phase encountered an error.</td><td>&nbsp;</td></tr></table>
