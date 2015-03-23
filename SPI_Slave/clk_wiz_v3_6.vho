@@ -54,7 +54,10 @@
 -- "Output    Output      Phase     Duty      Pk-to-Pk        Phase"
 -- "Clock    Freq (MHz) (degrees) Cycle (%) Jitter (ps)  Error (ps)"
 ------------------------------------------------------------------------------
--- CLK_OUT1____20.000______0.000______50.0______249.363____164.985
+-- CLK_OUT1____50.000______0.000______50.0______249.313____155.997
+-- CLK_OUT2____20.000______0.000______50.0______301.419____155.997
+-- CLK_OUT3____10.000______0.000______50.0______346.083____155.997
+-- CLK_OUT4_____5.000______0.000______50.0______395.746____155.997
 --
 ------------------------------------------------------------------------------
 -- "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -67,9 +70,12 @@
 component clk_wiz_v3_6
 port
  (-- Clock in ports
-  CLK_IN_50           : in     std_logic;
+  CLK_IN1           : in     std_logic;
   -- Clock out ports
-  CLK_OUT_20          : out    std_logic
+  CLK_OUT1          : out    std_logic;
+  CLK_OUT2          : out    std_logic;
+  CLK_OUT3          : out    std_logic;
+  CLK_OUT4          : out    std_logic
  );
 end component;
 
@@ -80,7 +86,10 @@ end component;
 your_instance_name : clk_wiz_v3_6
   port map
    (-- Clock in ports
-    CLK_IN_50 => CLK_IN_50,
+    CLK_IN1 => CLK_IN1,
     -- Clock out ports
-    CLK_OUT_20 => CLK_OUT_20);
+    CLK_OUT1 => CLK_OUT1,
+    CLK_OUT2 => CLK_OUT2,
+    CLK_OUT3 => CLK_OUT3,
+    CLK_OUT4 => CLK_OUT4);
 -- INST_TAG_END ------ End INSTANTIATION Template ------------

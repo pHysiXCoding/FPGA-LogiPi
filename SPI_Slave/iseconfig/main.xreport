@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-03-22T18:51:17</DateModified>
+  <DateModified>2015-03-24T00:43:11</DateModified>
   <ModuleName>main</ModuleName>
-  <SummaryTimeStamp>2015-03-22T17:32:32</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-03-24T00:32:57</SummaryTimeStamp>
   <SavedFilePath>E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/SPI_Slave/iseconfig/main.xreport</SavedFilePath>
   <ImplementationReportsDirectory>E:/Users/MrBigBear/My Documents/GitHub/FPGA-LogiPi/SPI_Slave\</ImplementationReportsDirectory>
   <DateInitialized>2015-03-22T13:03:28</DateInitialized>

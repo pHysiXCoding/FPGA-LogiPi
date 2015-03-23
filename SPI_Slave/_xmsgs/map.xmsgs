@@ -5,15 +5,14 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">SCK</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">PMOD1&lt;0&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">13</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">SSEL,
-MOSI,
-MISO,
-PB&lt;1&gt;_IBUF,
-PB&lt;0&gt;_IBUF</arg>
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">4</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">PMOD1&lt;7&gt;_IBUF,
+PMOD1&lt;6&gt;_IBUF,
+PMOD1&lt;5&gt;_IBUF,
+PMOD1&lt;4&gt;_IBUF</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 
@@ -33,9 +32,6 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 </msg>
 
 <msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
-</msg>
-
-<msg type="info" file="PhysDesignRules" num="1861" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">clknetwork/dcm_sp_inst</arg>, consult the device Data Sheet.
 </msg>
 
 </messages>

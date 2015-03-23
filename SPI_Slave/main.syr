@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> Reading design: main.prj
 
@@ -108,28 +108,33 @@ Slice Utilization Ratio Delta      : 5
 Analyzing Verilog file "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\clk_wiz_v3_6.v" into library work
 Parsing module <clk_wiz_v3_6>.
 Analyzing Verilog file "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" into library work
+Parsing module <slave>.
 Parsing module <main>.
-WARNING:HDLCompiler:568 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 128: Constant value is truncated to fit in <12> bits.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
 Elaborating module <main>.
-WARNING:HDLCompiler:872 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 152: Using initial value of byte_data_received since it is never assigned
 
 Elaborating module <clk_wiz_v3_6>.
 
 Elaborating module <IBUFG>.
 
-Elaborating module <DCM_SP(CLKDV_DIVIDE=2.5,CLKFX_DIVIDE=5,CLKFX_MULTIPLY=2,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\clk_wiz_v3_6.v" Line 128: Assignment to locked_int ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\clk_wiz_v3_6.v" Line 129: Assignment to status_int ignored, since the identifier is never used
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=8,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=8,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=20,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=40,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DIVIDE=80,CLKOUT3_PHASE=0.0,CLKOUT3_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\clk_wiz_v3_6.v" Line 129: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\clk_wiz_v3_6.v" Line 130: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\clk_wiz_v3_6.v" Line 131: Assignment to locked_unused ignored, since the identifier is never used
 
 Elaborating module <BUFG>.
-WARNING:HDLCompiler:413 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 136: Result of 28-bit expression is truncated to fit in 27-bit target.
-WARNING:HDLCompiler:413 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 140: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:634 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 151: Net <byte_two_received> does not have a driver.
+WARNING:HDLCompiler:1127 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 76: Assignment to CLK_20 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 77: Assignment to CLK_10 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 78: Assignment to CLK_5 ignored, since the identifier is never used
+
+Elaborating module <slave>.
+WARNING:HDLCompiler:413 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 31: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 98: Result of 23-bit expression is truncated to fit in 22-bit target.
+WARNING:HDLCompiler:413 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 102: Result of 17-bit expression is truncated to fit in 16-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -137,19 +142,16 @@ WARNING:HDLCompiler:634 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SP
 
 Synthesizing Unit <main>.
     Related source file is "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v".
-WARNING:Xst:647 - Input <PB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <SW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <SCK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <SSEL> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <MOSI> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" line 33: Output port <CLK_OUT1> of the instance <clknetwork> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <byte_two_received> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 3-bit register for signal <SSELr>.
-    Found 1-bit register for signal <LED<0>>.
-    Found 16-bit register for signal <byte_data_sent>.
-    WARNING:Xst:2404 -  FFs/Latches <LED<1><0:0>> (without init value) have a constant value of 0 in block <main>.
+INFO:Xst:3210 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" line 71: Output port <CLK_OUT2> of the instance <clknetwork> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" line 71: Output port <CLK_OUT3> of the instance <clknetwork> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" line 71: Output port <CLK_OUT4> of the instance <clknetwork> is unconnected or connected to loadless signal.
+    Found 16-bit register for signal <cnt_slow>.
+    Found 22-bit register for signal <cnt>.
+    Found 22-bit adder for signal <cnt[21]_GND_1_o_add_1_OUT> created at line 98.
+    Found 16-bit adder for signal <cnt_slow[15]_GND_1_o_add_5_OUT> created at line 102.
     Summary:
-	inferred  20 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  38 D-type flip-flop(s).
 Unit <main> synthesized.
 
 Synthesizing Unit <clk_wiz_v3_6>.
@@ -158,14 +160,42 @@ Synthesizing Unit <clk_wiz_v3_6>.
 	no macro.
 Unit <clk_wiz_v3_6> synthesized.
 
+Synthesizing Unit <slave>.
+    Related source file is "E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v".
+WARNING:Xst:647 - Input <MOSI> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 5-bit register for signal <counter>.
+    Found 16-bit register for signal <data_out>.
+    Found 1-bit register for signal <Z_6_o_SCK_DFF_23_q>.
+    Found 1-bit register for signal <CSbar_SCK_DFF_24>.
+    Found 2-bit register for signal <LEDS>.
+    Found 1-bit register for signal <finished>.
+    Found 5-bit adder for signal <counter[4]_GND_6_o_add_1_OUT> created at line 31.
+    Found 1-bit tristate buffer for signal <MISO> created at line 18
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Tristate(s).
+Unit <slave> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 3
- 1-bit register                                        : 1
- 16-bit register                                       : 1
- 3-bit register                                        : 1
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 1
+ 22-bit adder                                          : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 8
+ 1-bit register                                        : 3
+ 16-bit register                                       : 2
+ 2-bit register                                        : 1
+ 22-bit register                                       : 1
+ 5-bit register                                        : 1
+# Multiplexers                                         : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
 
 =========================================================================
 
@@ -173,42 +203,50 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <byte_data_sent_0> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <main>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <cnt_slow>: 1 register on signal <cnt_slow>.
+Unit <main> synthesized (advanced).
+
+Synthesizing (advanced) Unit <slave>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <slave> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 20
- Flip-Flops                                            : 20
+# Counters                                             : 3
+ 16-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 21
+ Flip-Flops                                            : 21
+# Multiplexers                                         : 1
+ 16-bit 2-to-1 multiplexer                             : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <byte_data_sent_0> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance clknetwork/pll_base_inst in unit clknetwork/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
 
 Optimizing unit <main> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 1.
 
 Final Macro Processing ...
-
-Processing Unit <main> :
-	Found 2-bit shift register for signal <SSELr_1>.
-Unit <main> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 17
- Flip-Flops                                            : 17
-# Shift Registers                                      : 1
- 2-bit shift register                                  : 1
+# Registers                                            : 64
+ Flip-Flops                                            : 64
 
 =========================================================================
 
@@ -231,25 +269,32 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 18
+# BELS                             : 140
 #      GND                         : 1
-#      INV                         : 1
-#      LUT3                        : 1
-#      LUT4                        : 14
+#      INV                         : 6
+#      LUT1                        : 36
+#      LUT2                        : 4
+#      LUT3                        : 16
+#      LUT4                        : 1
+#      LUT5                        : 1
+#      MUXCY                       : 36
 #      VCC                         : 1
-# FlipFlops/Latches                : 18
-#      FD                          : 17
-#      FDE                         : 1
-# Shift Registers                  : 1
-#      SRLC16E                     : 1
-# Clock Buffers                    : 2
-#      BUFG                        : 2
+#      XORCY                       : 38
+# FlipFlops/Latches                : 64
+#      FD                          : 20
+#      FDE                         : 16
+#      FDR                         : 22
+#      FDRE                        : 6
+# Clock Buffers                    : 6
+#      BUFG                        : 5
+#      BUFGP                       : 1
 # IO Buffers                       : 5
 #      IBUF                        : 1
 #      IBUFG                       : 1
-#      OBUF                        : 3
-# DCMs                             : 1
-#      DCM_SP                      : 1
+#      OBUF                        : 2
+#      OBUFT                       : 1
+# Others                           : 1
+#      PLL_ADV                     : 1
 
 Device utilization summary:
 ---------------------------
@@ -258,25 +303,25 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              18  out of  11440     0%  
- Number of Slice LUTs:                   17  out of   5720     0%  
-    Number used as Logic:                16  out of   5720     0%  
-    Number used as Memory:                1  out of   1440     0%  
-       Number used as SRL:                1
+ Number of Slice Registers:              63  out of  11440     0%  
+ Number of Slice LUTs:                   64  out of   5720     1%  
+    Number used as Logic:                64  out of   5720     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     18
-   Number with an unused Flip Flop:       0  out of     18     0%  
-   Number with an unused LUT:             1  out of     18     5%  
-   Number of fully used LUT-FF pairs:    17  out of     18    94%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:     66
+   Number with an unused Flip Flop:       3  out of     66     4%  
+   Number with an unused LUT:             2  out of     66     3%  
+   Number of fully used LUT-FF pairs:    61  out of     66    92%  
+   Number of unique control sets:         5
 
 IO Utilization: 
- Number of IOs:                          19
- Number of bonded IOBs:                   5  out of    102     4%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                   6  out of    102     5%  
+    IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of BUFG/BUFGCTRLs:                6  out of     16    37%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
 
 ---------------------------
 Partition Resource Summary:
@@ -299,8 +344,11 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-iCLK_50                            | DCM_SP:CLKFX           | 19    |
+clknetwork/pll_base_inst/CLKOUT0   | BUFG                   | 22    |
+cnt_21                             | NONE(cnt_slow_0)       | 16    |
+PMOD1<3>                           | BUFGP                  | 26    |
 -----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -310,9 +358,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 1.097ns (Maximum Frequency: 911.411MHz)
-   Minimum input arrival time before clock: 2.009ns
-   Maximum output required time after clock: 4.162ns
+   Minimum period: 3.066ns (Maximum Frequency: 326.158MHz)
+   Minimum input arrival time before clock: 4.572ns
+   Maximum output required time after clock: 5.054ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -320,89 +368,169 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'iCLK_50'
-  Clock period: 1.097ns (frequency: 911.411MHz)
-  Total number of paths / destination ports: 62 / 18
+Timing constraint: Default period analysis for Clock 'clknetwork/pll_base_inst/CLKOUT0'
+  Clock period: 2.639ns (frequency: 378.920MHz)
+  Total number of paths / destination ports: 275 / 44
 -------------------------------------------------------------------------
-Delay:               2.743ns (Levels of Logic = 1)
-  Source:            SSELr_1 (FF)
-  Destination:       LED_0 (FF)
-  Source Clock:      iCLK_50 rising 0.4X
-  Destination Clock: iCLK_50 rising 0.4X
+Delay:               2.639ns (Levels of Logic = 2)
+  Source:            cnt_21 (FF)
+  Destination:       cnt_21 (FF)
+  Source Clock:      clknetwork/pll_base_inst/CLKOUT0 rising
+  Destination Clock: clknetwork/pll_base_inst/CLKOUT0 rising
 
-  Data Path: SSELr_1 to LED_0
+  Data Path: cnt_21 to cnt_21
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             17   0.525   1.208  SSELr_1 (SSELr_1)
-     INV:I->O              1   0.255   0.681  LED_0_rstpot1_INV_0 (LED_0_rstpot)
-     FD:D                      0.074          LED_0
+     FDR:C->Q             39   0.525   1.637  cnt_21 (cnt_21)
+     LUT1:I0->O            0   0.254   0.000  Mcount_cnt_xor<21>_rt (Mcount_cnt_xor<21>_rt)
+     XORCY:LI->O           1   0.149   0.000  Mcount_cnt_xor<21> (Result<21>)
+     FDR:D                     0.074          cnt_21
     ----------------------------------------
-    Total                      2.743ns (0.854ns logic, 1.889ns route)
-                                       (31.1% logic, 68.9% route)
+    Total                      2.639ns (1.002ns logic, 1.637ns route)
+                                       (38.0% logic, 62.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'iCLK_50'
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default period analysis for Clock 'cnt_21'
+  Clock period: 2.326ns (frequency: 430.015MHz)
+  Total number of paths / destination ports: 136 / 16
 -------------------------------------------------------------------------
-Offset:              2.009ns (Levels of Logic = 1)
-  Source:            PMOD1<0> (PAD)
-  Destination:       Mshreg_SSELr_1 (FF)
-  Destination Clock: iCLK_50 rising 0.4X
+Delay:               2.326ns (Levels of Logic = 17)
+  Source:            cnt_slow_0 (FF)
+  Destination:       cnt_slow_15 (FF)
+  Source Clock:      cnt_21 rising
+  Destination Clock: cnt_21 rising
 
-  Data Path: PMOD1<0> to Mshreg_SSELr_1
+  Data Path: cnt_slow_0 to cnt_slow_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.328   0.681  PMOD1_0_IBUF (PMOD1_0_IBUF)
-     SRLC16E:D                -0.060          Mshreg_SSELr_1
+     FD:C->Q               2   0.525   0.725  cnt_slow_0 (cnt_slow_0)
+     INV:I->O              1   0.255   0.000  Mcount_cnt_slow_lut<0>_INV_0 (Mcount_cnt_slow_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Mcount_cnt_slow_cy<0> (Mcount_cnt_slow_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<1> (Mcount_cnt_slow_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<2> (Mcount_cnt_slow_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<3> (Mcount_cnt_slow_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<4> (Mcount_cnt_slow_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<5> (Mcount_cnt_slow_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<6> (Mcount_cnt_slow_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<7> (Mcount_cnt_slow_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<8> (Mcount_cnt_slow_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<9> (Mcount_cnt_slow_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<10> (Mcount_cnt_slow_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<11> (Mcount_cnt_slow_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<12> (Mcount_cnt_slow_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_cnt_slow_cy<13> (Mcount_cnt_slow_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  Mcount_cnt_slow_cy<14> (Mcount_cnt_slow_cy<14>)
+     XORCY:CI->O           1   0.206   0.000  Mcount_cnt_slow_xor<15> (Result<15>1)
+     FD:D                      0.074          cnt_slow_15
     ----------------------------------------
-    Total                      2.009ns (1.328ns logic, 0.681ns route)
-                                       (66.1% logic, 33.9% route)
+    Total                      2.326ns (1.600ns logic, 0.725ns route)
+                                       (68.8% logic, 31.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'iCLK_50'
-  Total number of paths / destination ports: 2 / 2
+Timing constraint: Default period analysis for Clock 'PMOD1<3>'
+  Clock period: 3.066ns (frequency: 326.158MHz)
+  Total number of paths / destination ports: 56 / 46
 -------------------------------------------------------------------------
-Offset:              4.162ns (Levels of Logic = 1)
-  Source:            byte_data_sent_15 (FF)
-  Destination:       PMOD1<2> (PAD)
-  Source Clock:      iCLK_50 rising 0.4X
+Delay:               3.066ns (Levels of Logic = 1)
+  Source:            SPI_SLAVE_INSTANT/finished (FF)
+  Destination:       SPI_SLAVE_INSTANT/data_out_15 (FF)
+  Source Clock:      PMOD1<3> rising
+  Destination Clock: PMOD1<3> rising
 
-  Data Path: byte_data_sent_15 to PMOD1<2>
+  Data Path: SPI_SLAVE_INSTANT/finished to SPI_SLAVE_INSTANT/data_out_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.525   0.725  byte_data_sent_15 (byte_data_sent_15)
-     OBUF:I->O                 2.912          PMOD1_2_OBUF (PMOD1<2>)
+     FDRE:C->Q             4   0.525   0.804  SPI_SLAVE_INSTANT/finished (SPI_SLAVE_INSTANT/finished)
+     LUT2:I1->O           16   0.254   1.181  SPI_SLAVE_INSTANT/_n0031_inv1 (SPI_SLAVE_INSTANT/_n0031_inv)
+     FDE:CE                    0.302          SPI_SLAVE_INSTANT/data_out_0
     ----------------------------------------
-    Total                      4.162ns (3.437ns logic, 0.725ns route)
-                                       (82.6% logic, 17.4% route)
+    Total                      3.066ns (1.081ns logic, 1.985ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PMOD1<3>'
+  Total number of paths / destination ports: 40 / 40
+-------------------------------------------------------------------------
+Offset:              4.572ns (Levels of Logic = 2)
+  Source:            PMOD1<2> (PAD)
+  Destination:       SPI_SLAVE_INSTANT/data_out_15 (FF)
+  Destination Clock: PMOD1<3> rising
+
+  Data Path: PMOD1<2> to SPI_SLAVE_INSTANT/data_out_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   1.328   1.511  PMOD1_2_IBUF (PMOD1_2_IBUF)
+     LUT2:I0->O           16   0.250   1.181  SPI_SLAVE_INSTANT/_n0031_inv1 (SPI_SLAVE_INSTANT/_n0031_inv)
+     FDE:CE                    0.302          SPI_SLAVE_INSTANT/data_out_0
+    ----------------------------------------
+    Total                      4.572ns (1.880ns logic, 2.692ns route)
+                                       (41.1% logic, 58.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PMOD1<3>'
+  Total number of paths / destination ports: 4 / 3
+-------------------------------------------------------------------------
+Offset:              5.054ns (Levels of Logic = 2)
+  Source:            SPI_SLAVE_INSTANT/CSbar_SCK_DFF_24 (FF)
+  Destination:       PMOD1<1> (PAD)
+  Source Clock:      PMOD1<3> rising
+
+  Data Path: SPI_SLAVE_INSTANT/CSbar_SCK_DFF_24 to PMOD1<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  SPI_SLAVE_INSTANT/CSbar_SCK_DFF_24 (SPI_SLAVE_INSTANT/CSbar_SCK_DFF_24)
+     INV:I->O              1   0.255   0.681  SPI_SLAVE_INSTANT/CSbar_SCK_DFF_24_inv1_INV_0 (SPI_SLAVE_INSTANT/CSbar_SCK_DFF_24_inv)
+     OBUFT:T->O                2.912          PMOD1_1_OBUFT (PMOD1<1>)
+    ----------------------------------------
+    Total                      5.054ns (3.692ns logic, 1.362ns route)
+                                       (73.1% logic, 26.9% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock iCLK_50
+Clock to Setup on destination clock PMOD1<3>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-iCLK_50        |    2.743|         |         |         |
+PMOD1<3>       |    3.066|         |         |         |
+cnt_21         |    1.579|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clknetwork/pll_base_inst/CLKOUT0
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+clknetwork/pll_base_inst/CLKOUT0|    2.639|         |         |         |
+--------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cnt_21
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cnt_21         |    2.326|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.70 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.77 secs
  
 --> 
 
-Total memory usage is 259564 kilobytes
+Total memory usage is 260012 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   16 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

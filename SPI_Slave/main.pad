@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Mar 22 22:27:45 2015
+Tue Mar 24 04:02:54 2015
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -19,8 +19,8 @@ Pinout by Pin Number:
 
 -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|Drive (mA)|Slew Rate|Termination|IOB Delay|Voltage|Constraint|IO Register|Signal Integrity|
-P1|PMOD1<2>|IOB|IO_L83N_VREF_3|OUTPUT|LVTTL|3|12|SLOW||||LOCATED|NO|NONE|
-P2|PMOD1<1>|IOB|IO_L83P_3|INPUT|LVTTL|3||||NONE||LOCATED|NO|NONE|
+P1|PMOD1<2>|IOB|IO_L83N_VREF_3|INPUT|LVTTL|3||||NONE||LOCATED|NO|NONE|
+P2|PMOD1<1>|IOB|IO_L83P_3|TRISTATE|LVTTL|3|12|SLOW||||LOCATED|NO|NONE|
 P3|||GND||||||||||||
 P4|||VCCO_3|||3|||||3.30||||
 P5|PMOD1<0>|IOB|IO_L52N_3|INPUT|LVTTL|3||||NONE||LOCATED|NO|NONE|
@@ -117,13 +117,13 @@ P95||IOBM|IO_L40P_GCLK11_1|UNUSED||1|||||||||
 P96|||GND||||||||||||
 P97||IOBS|IO_L34N_1|UNUSED||1|||||||||
 P98||IOBM|IO_L34P_1|UNUSED||1|||||||||
-P99|SW<0>|IOB|IO_L33N_1|INPUT|LVTTL|1||||NONE||LOCATED|NO|NONE|
-P100|SW<1>|IOB|IO_L33P_1|INPUT|LVTTL|1||||NONE||LOCATED|NO|NONE|
-P101|PB<1>|IOB|IO_L32N_1|INPUT|LVTTL|1||||NONE||LOCATED|NO|NONE|
-P102|PB<0>|IOB|IO_L32P_1|INPUT|LVTTL|1||||NONE||LOCATED|NO|NONE|
+P99||IOBS|IO_L33N_1|UNUSED||1|||||||||
+P100||IOBM|IO_L33P_1|UNUSED||1|||||||||
+P101||IOBS|IO_L32N_1|UNUSED||1|||||||||
+P102||IOBM|IO_L32P_1|UNUSED||1|||||||||
 P103|||VCCO_1|||1|||||3.30||||
 P104|LED<1>|IOB|IO_L1N_VREF_1|OUTPUT|LVTTL|1|12|SLOW||||LOCATED|NO|NONE|
-P105|LED<0>|IOB|IO_L1P_1|OUTPUT|LVTTL|1|12|SLOW||||LOCATED|NO|NONE|
+P105|LED<0>|IOB|IO_L1P_1|OUTPUT|LVTTL|1|12|SLOW||||LOCATED|YES|NONE|
 P106|||TDO||||||||||||
 P107|||TMS||||||||||||
 P108|||GND||||||||||||
