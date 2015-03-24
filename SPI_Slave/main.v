@@ -3,43 +3,82 @@
 // SPI SLAVE MODULE
 //=================================================
 module slave(
-	input 	[15:0]	DATA,
+	input 	[11:0]	DATA,
 	input					SCK,
 	input					MOSI,
 	input					CSbar,
 	output reg			MISO,
 	output reg [1:0] 	LEDS
 	);
-
-	reg	[15:0]	data_out = 16'b0;
-	reg 				finished = 1'b0;
-	reg 	[4:0]		counter 	= 5'b0;
 	
+	reg	[15:0]	data_in 	= 16'b0;
+	reg	[15:0]	data_out = 16'b0;
+	reg	[1:0]		finished = 2'b00;			// [INPUT OUTPUT]
+	reg	[4:0]		icounter = 5'b0;
+	reg	[4:0]		ocounter = 5'b0;
+	
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// MISO Component (Slave Output/Master Input):
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
 	always @(posedge SCK) begin
-		if (CSbar) begin
-			finished 		<= 1'b0;
-			counter			<= 5'b0;
-			data_out 		<= DATA;
+		case (CSbar)
+		1'b1: begin
+			finished[0] 	<= 1'b0;
+			ocounter			<= 5'b0;
+			//data_out 		<= {data_in};
+			data_out			<= {data_in[10:7], DATA};
 			MISO 				<= 1'bz;
 		end
-		else if (~finished) begin
-			MISO 				<= data_out[15];
+		1'b0: begin
+			case (finished[0])
+			1'b0: begin
+				MISO 			<= data_out[15];
+				data_out 	<= {data_out[14:0], 1'b0};
 			
-			//data_in 		<= {data_in[14:0], MOSI};
-			data_out 		<= {data_out[14:0], 1'b0};
-			
-			counter 			<= counter + 1;
-
-			finished 		<= counter[4];
+				ocounter 	<= ocounter + 1;
+				finished[0] <= ocounter[4];
+			end
+			1'b1:			
+				MISO			<= 1'bz;
+			endcase
 		end
-		else			
-			MISO				<= 1'bz;
+		endcase
 	end
 	
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+// MOSI Component (Slave Input/Master Output):
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
 	always @(posedge SCK) begin
-			LEDS[0] <= ~CSbar;
-			LEDS[1] <= finished;
+		case (CSbar)
+		1'b1: begin
+			icounter 		<= 1'b0;
+			finished[1] 	<= 1'b0;
+		end
+
+		1'b0: begin
+			case (finished[1])
+			1'b0: begin
+				data_in 		<= {data_in[14:0], MOSI};
+				
+				icounter 	<= icounter + 1;
+				finished[1]	<= icounter[4];
+			end
+			1'b1: begin
+				finished[1] <= 1'b1;
+			end
+			endcase
+		end
+		endcase
 	end
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+// Module I/O:
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~		
+	always @(posedge SCK) begin
+		LEDS[0] <= data_in[12];
+		LEDS[1] <= finished[1];
+	end
+
 endmodule
 //=================================================
 // END SPI SLAVE MODULE
@@ -61,7 +100,7 @@ module main(
 // User declarations & instantiations:
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	reg [21:0] cnt;
-	reg [15:0] cnt_slow = 16'hA001;
+	reg [11:0] cnt_slow = 12'h000;
 	
 	wire CLK_50;
 	wire CLK_20;

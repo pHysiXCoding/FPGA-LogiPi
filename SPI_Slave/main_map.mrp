@@ -10,40 +10,46 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Mar 24 04:02:23 2015
+Mapped Date    : Tue Mar 24 13:09:36 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                    63 out of  11,440    1%
-    Number used as Flip Flops:                  63
+  Number of Slice Registers:                    71 out of  11,440    1%
+    Number used as Flip Flops:                  71
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         53 out of   5,720    1%
+  Number of Slice LUTs:                         55 out of   5,720    1%
     Number used as logic:                       51 out of   5,720    1%
-      Number using O6 output only:               4
-      Number using O5 output only:              34
-      Number using O5 and O6:                   13
+      Number using O6 output only:               6
+      Number using O5 output only:              30
+      Number using O5 and O6:                   15
       Number used as ROM:                        0
-    Number used as Memory:                       0 out of   1,440    0%
+    Number used as Memory:                       2 out of   1,440    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             2
+        Number using O6 output only:             2
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
     Number used exclusively as route-thrus:      2
       Number with same-slice register load:      0
       Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    19 out of   1,430    1%
-  Number of MUXCYs used:                        40 out of   2,860    1%
-  Number of LUT Flip Flop pairs used:           56
-    Number with an unused Flip Flop:             3 out of      56    5%
-    Number with an unused LUT:                   3 out of      56    5%
-    Number of fully used LUT-FF pairs:          50 out of      56   89%
-    Number of unique control sets:               5
+  Number of occupied Slices:                    22 out of   1,430    1%
+  Number of MUXCYs used:                        36 out of   2,860    1%
+  Number of LUT Flip Flop pairs used:           62
+    Number with an unused Flip Flop:             2 out of      62    3%
+    Number with an unused LUT:                   7 out of      62   11%
+    Number of fully used LUT-FF pairs:          53 out of      62   85%
+    Number of unique control sets:               8
     Number of slice register sites lost
-      to control set restrictions:               9 out of  11,440    1%
+      to control set restrictions:              23 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -54,7 +60,6 @@ Slice Logic Distribution:
 IO Utilization:
   Number of bonded IOBs:                        11 out of     102   10%
     Number of LOCed IOBs:                       11 out of      11  100%
-    IOB Flip Flops:                              1
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -71,9 +76,7 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
-  Number of OLOGIC2/OSERDES2s:                   1 out of     200    1%
-    Number used as OLOGIC2s:                     1
-    Number used as OSERDES2s:                    0
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
@@ -87,10 +90,10 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                1.60
+Average Fanout of Non-Clock Nets:                1.81
 
 Peak Memory Usage:  359 MB
-Total REAL time to MAP completion:  25 secs 
+Total REAL time to MAP completion:  4 secs 
 Total CPU time to MAP completion:   4 secs 
 
 Table of Contents
@@ -117,10 +120,9 @@ Section 2 - Warnings
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network PMOD1<0>_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 4 more times for the following
+INFO:LIT:243 - Logical network PMOD1<7>_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 3 more times for the following
    (max. 5 shown):
-   PMOD1<7>_IBUF,
    PMOD1<6>_IBUF,
    PMOD1<5>_IBUF,
    PMOD1<4>_IBUF
@@ -178,7 +180,7 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| LED<0>                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW | OFF          |          |          |
+| LED<0>                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | LED<1>                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | PMOD1<0>                           | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | PMOD1<1>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |

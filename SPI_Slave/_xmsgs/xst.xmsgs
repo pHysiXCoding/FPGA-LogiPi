@@ -14,34 +14,52 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\clk_wiz_v3_6.v" Line 131: Assignment to <arg fmt="%s" index="1">locked_unused</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 76: Assignment to <arg fmt="%s" index="1">CLK_20</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 115: Assignment to <arg fmt="%s" index="1">CLK_20</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 77: Assignment to <arg fmt="%s" index="1">CLK_10</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 116: Assignment to <arg fmt="%s" index="1">CLK_10</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 78: Assignment to <arg fmt="%s" index="1">CLK_5</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 117: Assignment to <arg fmt="%s" index="1">CLK_5</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 31: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 38: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 98: Result of <arg fmt="%d" index="1">23</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">22</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 63: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 102: Result of <arg fmt="%d" index="1">17</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 137: Result of <arg fmt="%d" index="1">23</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">22</arg>-bit target.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v</arg>&quot; line <arg fmt="%s" index="2">71</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clknetwork</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v" Line 141: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v</arg>&quot; line <arg fmt="%s" index="2">71</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clknetwork</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v</arg>&quot; line <arg fmt="%s" index="2">110</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clknetwork</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v</arg>&quot; line <arg fmt="%s" index="2">71</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clknetwork</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v</arg>&quot; line <arg fmt="%s" index="2">110</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clknetwork</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">MOSI</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">E:\Users\MrBigBear\My Documents\GitHub\FPGA-LogiPi\SPI_Slave\main.v</arg>&quot; line <arg fmt="%s" index="2">110</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clknetwork</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_in_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SPI_SLAVE_INSTANT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_in_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SPI_SLAVE_INSTANT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_in_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SPI_SLAVE_INSTANT</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_in_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">slave</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_in_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">slave</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_in_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">slave</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="1901" delta="old" >Instance <arg fmt="%s" index="1">clknetwork/pll_base_inst</arg> in unit <arg fmt="%s" index="2">clknetwork/pll_base_inst</arg> of type <arg fmt="%s" index="3">PLL_BASE</arg> has been replaced by <arg fmt="%s" index="4">PLL_ADV</arg>

@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Mar 24 04:02:54 2015
+Tue Mar 24 13:09:46 2015
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -124,7 +124,7 @@ Pinout by Pin Number:
 |P102      |           |IOBM     |IO_L32P_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P103      |           |         |VCCO_1                    |         |           |1             |          |         |           |         |3.30     |          |           |                |
 |P104      |LED<1>     |IOB      |IO_L1N_VREF_1             |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|P105      |LED<0>     |IOB      |IO_L1P_1                  |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |         |LOCATED   |YES        |NONE            |
+|P105      |LED<0>     |IOB      |IO_L1P_1                  |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P106      |           |         |TDO                       |         |           |              |          |         |           |         |         |          |           |                |
 |P107      |           |         |TMS                       |         |           |              |          |         |           |         |         |          |           |                |
 |P108      |           |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |

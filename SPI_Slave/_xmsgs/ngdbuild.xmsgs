@@ -9,9 +9,6 @@
 <arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clknetwork_clkout0 = PERIOD &quot;clknetwork_clkout0&quot; TS_PER_CLK50 HIGH 50%&gt;</arg>
 </msg>
 
-<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">PMOD1&lt;0&gt;</arg>&apos; has no legal driver
-</msg>
-
 <msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">PMOD1&lt;7&gt;</arg>&apos; has no legal driver
 </msg>
 
