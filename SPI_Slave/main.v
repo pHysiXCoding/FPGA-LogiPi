@@ -76,7 +76,7 @@ module slave(
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~		
 	always @(posedge SCK) begin
 		LEDS[0] <= data_in[12];
-		LEDS[1] <= finished[1];
+		LEDS[1] <= (finished[1] & finished[0]);
 	end
 
 endmodule

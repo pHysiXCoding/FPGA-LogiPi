@@ -289,11 +289,11 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 134
+# BELS                             : 135
 #      GND                         : 1
 #      INV                         : 7
 #      LUT1                        : 32
-#      LUT2                        : 6
+#      LUT2                        : 7
 #      LUT3                        : 17
 #      LUT4                        : 2
 #      LUT5                        : 2
@@ -326,16 +326,16 @@ Selected Device : 6slx9tqg144-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:              71  out of  11440     0%  
- Number of Slice LUTs:                   68  out of   5720     1%  
-    Number used as Logic:                66  out of   5720     1%  
+ Number of Slice LUTs:                   69  out of   5720     1%  
+    Number used as Logic:                67  out of   5720     1%  
     Number used as Memory:                2  out of   1440     0%  
        Number used as SRL:                2
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:     73
    Number with an unused Flip Flop:       2  out of     73     2%  
-   Number with an unused LUT:             5  out of     73     6%  
-   Number of fully used LUT-FF pairs:    66  out of     73    90%  
+   Number with an unused LUT:             4  out of     73     5%  
+   Number of fully used LUT-FF pairs:    67  out of     73    91%  
    Number of unique control sets:         8
 
 IO Utilization: 
@@ -381,7 +381,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 2.988ns (Maximum Frequency: 334.672MHz)
+   Minimum period: 3.028ns (Maximum Frequency: 330.251MHz)
    Minimum input arrival time before clock: 4.672ns
    Maximum output required time after clock: 5.054ns
    Maximum combinational path delay: No path found
@@ -449,10 +449,10 @@ Delay:               2.233ns (Levels of Logic = 13)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'PMOD1<3>'
-  Clock period: 2.988ns (frequency: 334.672MHz)
-  Total number of paths / destination ports: 96 / 71
+  Clock period: 3.028ns (frequency: 330.251MHz)
+  Total number of paths / destination ports: 97 / 71
 -------------------------------------------------------------------------
-Delay:               2.988ns (Levels of Logic = 1)
+Delay:               3.028ns (Levels of Logic = 1)
   Source:            SPI_SLAVE_INSTANT/finished_0 (FF)
   Destination:       SPI_SLAVE_INSTANT/data_out_15 (FF)
   Source Clock:      PMOD1<3> rising
@@ -462,12 +462,12 @@ Delay:               2.988ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.525   0.726  SPI_SLAVE_INSTANT/finished_0 (SPI_SLAVE_INSTANT/finished_0)
-     LUT2:I1->O           16   0.254   1.181  SPI_SLAVE_INSTANT/_n0053_inv1 (SPI_SLAVE_INSTANT/_n0053_inv)
+     FDRE:C->Q             3   0.525   0.766  SPI_SLAVE_INSTANT/finished_0 (SPI_SLAVE_INSTANT/finished_0)
+     LUT2:I1->O           16   0.254   1.181  SPI_SLAVE_INSTANT/_n0054_inv1 (SPI_SLAVE_INSTANT/_n0054_inv)
      FDE:CE                    0.302          SPI_SLAVE_INSTANT/data_out_0
     ----------------------------------------
-    Total                      2.988ns (1.081ns logic, 1.907ns route)
-                                       (36.2% logic, 63.8% route)
+    Total                      3.028ns (1.081ns logic, 1.947ns route)
+                                       (35.7% logic, 64.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'PMOD1<3>'
@@ -483,7 +483,7 @@ Offset:              4.672ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            31   1.328   1.611  PMOD1_2_IBUF (PMOD1_2_IBUF)
-     LUT2:I0->O           16   0.250   1.181  SPI_SLAVE_INSTANT/_n0053_inv1 (SPI_SLAVE_INSTANT/_n0053_inv)
+     LUT2:I0->O           16   0.250   1.181  SPI_SLAVE_INSTANT/_n0054_inv1 (SPI_SLAVE_INSTANT/_n0054_inv)
      FDE:CE                    0.302          SPI_SLAVE_INSTANT/data_out_0
     ----------------------------------------
     Total                      4.672ns (1.880ns logic, 2.792ns route)
@@ -519,7 +519,7 @@ Clock to Setup on destination clock PMOD1<3>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-PMOD1<3>       |    2.988|         |         |         |
+PMOD1<3>       |    3.028|         |         |         |
 cnt_21         |    1.579|         |         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -542,12 +542,12 @@ cnt_21         |    2.233|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.67 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.62 secs
  
 --> 
 
-Total memory usage is 260268 kilobytes
+Total memory usage is 260140 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   16 (   0 filtered)
