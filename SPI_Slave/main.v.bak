@@ -2,7 +2,7 @@
 //=================================================
 // SPI SLAVE MODULE
 //=================================================
-module SPI_SLAVE_DEVICE(
+module slave(
 	input 	[11:0]	DATA,
 	input					SCK,
 	input					MOSI,
@@ -117,18 +117,19 @@ module main(
 		.CLK_OUT4           (CLK_5)
 		);
 		
-	SPI_SLAVE_DEVICE SPI_SLAVE_INSTANT(
+	slave SPI_SLAVE_INSTANT(
 		.DATA		( cnt_slow ),
+		.SCK 		( PMOD1[3] ),
 		.MOSI 	( PMOD1[0] ),
 		.MISO 	( PMOD1[1] ),
 		.CSbar 	( PMOD1[2] ),
-		.SCK 		( PMOD1[3] ),
 		.LEDS 	( LED )
 		);
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // User code:
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 	always @(posedge CLK_50) begin
 		if (cnt[21])
 			cnt 	<= 0;
